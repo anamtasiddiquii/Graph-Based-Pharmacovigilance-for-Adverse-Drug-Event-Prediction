@@ -1,23 +1,54 @@
 
-# ⚕️ Personalized Adverse Drug Reaction Prediction using Heterogeneous GNNs
+Graph-Based Pharmacovigilance for Adverse Drug Event Prediction
+Overview
 
-This project implements a heterogeneous GNN model using PyTorch Geometric for **drug-side effect link prediction**, leveraging biomedical relationships from **SIDER** and **CTD** datasets.
+This project explores the application of Graph Neural Networks (GNNs) to pharmacovigilance and adverse drug event (ADE) prediction. It models relationships between drugs and adverse events within a heterogeneous biomedical graph and applies graph-based representation learning to identify potentially important drug–event associations.
 
-## 🔬 Objective
+The project combines biomedical data processing, heterogeneous graph construction, graph neural networks, and link prediction using Python, PyTorch, and PyTorch Geometric.
 
-Predict links between drugs and side effects by modeling a heterogeneous graph with the following node types:
+Objective
 
-- **Drug**
-- **Side Effect**
-- **Disease**
-- **Gene**
+The primary objective is to investigate a graph-based machine learning framework for predicting drug–adverse event associations.
 
-And the following edge types:
+The project focuses on:
 
-- Drug → Side Effect (`causes`)
-- Drug → Disease (`associates`)
-- Drug → Gene (`interacts`)
-- Reverse relations for all of the above
+Processing and integrating biomedical datasets
+Representing biomedical entities and their relationships as a heterogeneous graph
+Learning entity representations using Graph Neural Networks
+Applying graph attention-based message passing
+Predicting drug–adverse event associations through link prediction
+Evaluating predictions using ROC-AUC and AUPRC
+Research Focus
+
+This project lies at the intersection of:
+
+Pharmacovigilance
+Biomedical Data Analysis
+Graph Machine Learning
+Adverse Drug Event Prediction
+Heterogeneous Graph Representation Learning
+Graph Neural Networks
+Link Prediction
+Healthcare AI
+Biomedical Graph Representation
+
+The project represents biomedical information as a heterogeneous graph containing multiple entity types and relationships.
+
+Node Types
+Drug
+Side Effect
+Disease
+Gene
+Relationship Types
+
+The graph incorporates relationships including:
+
+Drug → Side Effect
+Drug → Disease
+Drug → Gene
+Reverse relationships where applicable
+
+This heterogeneous representation enables the model to learn from interconnected biomedical entities rather than treating drug–event associations as independent observations.
 
 ## 📁 Project Structure
 
@@ -100,23 +131,7 @@ Early stopping triggered after 204 epochs due to no improvement.
 Test AUC: 0.9911, Test AUPRC: 0.9857
 ```
 
-## 📈 Results
 
-High validation and test AUC/AUPRC indicate the heterogeneous GNN effectively captures drug-side effect relationships in the biomedical graph.
-
-## 🚀 Future Work
-
-- Use molecular fingerprints or SMILES embeddings for drugs
-- Pretrained embeddings for genes and diseases
-- Extend to other relation prediction tasks (e.g., drug-gene, drug-disease)
-- Use larger subsets of CTD/SIDER
-- use drig bank's dataset 
-
-## 👨‍🔬 Author
-
-Project by [Arnav Goyal]
-
----
 
 For any questions, feel free to raise an issue or reach out.
 
