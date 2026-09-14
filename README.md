@@ -70,10 +70,10 @@ This heterogeneous representation enables the model to learn from interconnected
 Install dependencies using:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirments.txt
 ```
 
-Example `requirements.txt`:
+Example `requirments.txt`:
 ```txt
 torch>=2.0.0
 torch-geometric
