@@ -1,12 +1,12 @@
 
-Graph-Based Pharmacovigilance for Adverse Drug Event Prediction
-Overview
+#Graph-Based Pharmacovigilance for Adverse Drug Event Prediction
+#Overview
 
 This project explores the application of Graph Neural Networks (GNNs) to pharmacovigilance and adverse drug event (ADE) prediction. It models relationships between drugs and adverse events within a heterogeneous biomedical graph and applies graph-based representation learning to identify potentially important drug–event associations.
 
 The project combines biomedical data processing, heterogeneous graph construction, graph neural networks, and link prediction using Python, PyTorch, and PyTorch Geometric.
 
-Objective
+#Objective
 
 The primary objective is to investigate a graph-based machine learning framework for predicting drug–adverse event associations.
 
@@ -119,6 +119,17 @@ Training is done using:
 - AUC and AUPRC as metrics
 
 Early stopping is used based on validation AUC.
+Evaluation
+
+Model performance is evaluated using:
+
+#ROC-AUC
+
+Measures the model's ability to distinguish positive drug–side effect associations from negative associations.
+
+#AUPRC
+
+Measures the precision–recall trade-off and is particularly informative for link-prediction tasks where positive associations may be relatively sparse.
 
 Sample output:
 ```
@@ -131,7 +142,7 @@ Early stopping triggered after 204 epochs due to no improvement.
 Test AUC: 0.9911, Test AUPRC: 0.9857
 ```
 
+This project investigates how heterogeneous Graph Neural Networks can model biomedical relationships and predict drug–side effect associations, providing a computational foundation for graph-based pharmacovigilance research.
 
 
-For any questions, feel free to raise an issue or reach out.
 
